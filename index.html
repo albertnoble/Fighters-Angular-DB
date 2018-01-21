@@ -2,25 +2,66 @@
 <html lang="en">
 <head>
     <title>Fighters DB</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     <link rel="stylesheet" type="text/css" href="app/css/style.css">
 </head>
 <body>
 
-<div ng-app="myApp" ng-controller="myCtrl">
-      <ul ng-repeat="x in names">
-        <li>Name:{{ x.firstname + " " + x.lastname }}</li>
-        <li>Class: {{ x.class }} | Strength: {{x.str}} : Wisdom: {{x.wisdom}}</li>
-        <li>Location: {{x.location}}</li>
-      </ul>
+<div class="container-fluid">
+    <header class="row">
+        <div class="col-sm-12">
+            <h1>The Fighters DB</h1>
+        </div>
+    </header>
+
+    <div class="row nav-menu">
+        <div class="col-sm-6 text-white">
+            #1 source for fighters from around the world
+        </div>
+        <div class="col-sm-2 nav-item">
+            <a class="text-white" href="#">Home</a>
+        </div>
+        <div class="col-sm-2 nav-item">
+            <a class="text-white" href="#">Fighters</a>
+        </div>
+        <div class="col-sm-2 nav-item">
+            <a class="text-white" href="#">Map</a>
+        </div>
+    </div>
+
+    <div class="row banner">
+        <div class="col-sm-12" align="center">
+            <img src="assets/img/knight.jpg">
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="row">
+        <div class="col-sm-9">
+            <div ng-app="myApp" ng-controller="myCtrl">
+                  <ul ng-repeat="x in names">
+                    <li>Name:{{ x.firstname + " " + x.lastname }}</li>
+                    <li>Class: {{ x.class }} | Strength: {{x.str}} : Wisdom: {{x.wisdom}}</li>
+                    <li>Location: {{x.location}}</li>
+                  </ul>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="app/app.js"></script>
 <script src="app/controllers/controller.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 </html>
