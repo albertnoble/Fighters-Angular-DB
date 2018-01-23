@@ -4,16 +4,19 @@
     <title>Fighters DB</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="utf-8">
+    
+    <!--AngularJS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
     
     <!--Bootstrap CSS-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     <link rel="stylesheet" type="text/css" href="app/css/style.css">
 </head>
-<body>
+<body ng-app="myApp" ng-controller="myCtrl">
 
-<div class="container-fluid">
+<div class="container-fluid" >
     <header class="row">
         <div class="col-sm-12">
             <h1>The Fighters DB</h1>
@@ -40,23 +43,27 @@
             <img src="assets/img/knight.jpg">
         </div>
     </div>
+
     <br>
     <hr>
     <br>
+
+    <a href="red">Red</a>
+    <a href="green">Green</a>
+    
     <div class="row">
         <div class="col-sm-9">
-            <div ng-app="myApp" ng-controller="myCtrl">
-                  <ul ng-repeat="x in names">
-                    <li>Name:{{ x.firstname + " " + x.lastname }}</li>
-                    <li>Class: {{ x.class }} | Strength: {{x.str}} : Wisdom: {{x.wisdom}}</li>
-                    <li>Location: {{x.location}}</li>
-                  </ul>
-            </div>
+            <div ng-view></div>
         </div>
     </div>
+    
+    
+            
+        
 </div>
 
 <script src="app/app.js"></script>
+<script src="app/routing/routes.js"></script>
 <script src="app/controllers/controller.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

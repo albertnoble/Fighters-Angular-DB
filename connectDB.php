@@ -19,7 +19,7 @@ while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
     $outp .= '{"firstname":"'  . $rs["firstname"]. '",';
     $outp .= '"lastname":"'   . $rs["lastname"]. '",';
     $outp .= '"class":"'. $rs["class"]. '",';
-    $outp .= '"strength":"'. $rs["strength"]. '",';
+    $outp .= '"str":"'. $rs["strength"]. '",';
     $outp .= '"wisdom":"'. $rs["wisdom"]. '",';
     $outp .= '"location":"'. $rs["location"]. '"}';
 }
