@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <title>Fighters DB</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,7 +14,7 @@
     
     <link rel="stylesheet" type="text/css" href="app/css/style.css">
 </head>
-<body ng-app="myApp" ng-controller="myCtrl">
+<body ng-controller="myCtrl">
 
 <div class="container-fluid" >
     <header class="row">
@@ -24,17 +24,20 @@
     </header>
 
     <div class="row nav-menu">
-        <div class="col-sm-6 text-white">
+        <div class="col-sm-8 text-white">
             #1 source for fighters from around the world
         </div>
-        <div class="col-sm-2 nav-item">
-            <a class="text-white" href="#">Home</a>
+        <div class="col-sm-1 nav-item">
+            <a class="text-white" href="#!/">Home</a>
         </div>
-        <div class="col-sm-2 nav-item">
-            <a class="text-white" href="#">Fighters</a>
+        <div class="col-sm-1 nav-item">
+            <a class="text-white" href="#!fighters">Fighters</a>
         </div>
-        <div class="col-sm-2 nav-item">
-            <a class="text-white" href="#">Map</a>
+        <div class="col-sm-1 nav-item">
+            <a class="text-white" href="#!addFighter">Add Fighter</a>
+        </div>
+        <div class="col-sm-1 nav-item">
+            <a class="text-white" href="#!map">Map</a>
         </div>
     </div>
 
@@ -47,24 +50,18 @@
     <br>
     <hr>
     <br>
-
-    <a href="red">Red</a>
-    <a href="green">Green</a>
-    
     <div class="row">
-        <div class="col-sm-9">
+        <div class="col-sm-12">
             <div ng-view></div>
         </div>
     </div>
-    
-    
-            
-        
+
 </div>
 
 <script src="app/app.js"></script>
 <script src="app/routing/routes.js"></script>
 <script src="app/controllers/controller.js"></script>
+
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

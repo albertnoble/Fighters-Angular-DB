@@ -1,16 +1,15 @@
-app.config(function ($routeProvider) {
-    $routeProvider
-    .when("/", {
-        templateUrl : "<h1>None</h1><p>The fighters Database</p>"
+app.config(function($routeProvider) {
+    $routeProvider.when("/", {
+        templateUrl : "views/home.html",
     })
-    .when("/red", {
-        templateUrl : "<h1>None</h1><p>The fighters Database</p>"
+    .when("/fighters", {
+        templateUrl : "views/fighters.html",
     })
-    .when("/green", {
-        templateUrl : "<h1>None</h1><p>The fighters Database</p>"
+    .when("/addFighter", {
+        templateUrl : "views/AddFighter.html",
     })
-    .otherwise({
-        template : "<h1>None</h1><p>The fighters Database</p>"
-    });
-    
+    .when("/map", {
+        templateUrl : "views/map.html",
+    })
+    .otherwise({redirectTo: "/"})
 });
